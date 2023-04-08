@@ -1,0 +1,18 @@
+{
+    "name": "BootUp",
+    "rootNamespace": "BootUp",
+    "references": [
+        "GUID:621d10e5dc7c8944c967d8ccbebcb6d3",
+        "GUID:459f85033dd370c468604210c2f5d049",
+        "GUID:868db906bbb705740ae278a535bd582c"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

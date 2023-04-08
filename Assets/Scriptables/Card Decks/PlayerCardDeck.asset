@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2f129e8ba403204fa8bc0b8ebca8d43, type: 3}
+  m_Name: PlayerCardDeck
+  m_EditorClassIdentifier: 
+  cards:
+  - {fileID: 11400000, guid: 3c365bebfff2ce2449eac74a4df5308a, type: 2}
+  - {fileID: 11400000, guid: 848e537ba4aa6b54f9f5f40542f15469, type: 2}
+  - {fileID: 11400000, guid: 2328bd6f2e1ea5843a0dfe7fa4af4f9f, type: 2}
+  - {fileID: 11400000, guid: 848e537ba4aa6b54f9f5f40542f15469, type: 2}
+  - {fileID: 11400000, guid: 2328bd6f2e1ea5843a0dfe7fa4af4f9f, type: 2}
+  - {fileID: 11400000, guid: 20d27fa8c9ae93645b9610ae3604522e, type: 2}
+  - {fileID: 11400000, guid: 20d27fa8c9ae93645b9610ae3604522e, type: 2}
+  - {fileID: 11400000, guid: 25642939cd2a16042835d3fda658aa37, type: 2}
+  - {fileID: 11400000, guid: 3c365bebfff2ce2449eac74a4df5308a, type: 2}
+  - {fileID: 11400000, guid: 848e537ba4aa6b54f9f5f40542f15469, type: 2}

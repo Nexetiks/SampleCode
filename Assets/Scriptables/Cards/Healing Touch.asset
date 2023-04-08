@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bf222393983e4b4eb8a5d068b492c74, type: 3}
+  m_Name: Healing Touch
+  m_EditorClassIdentifier: 
+  <NameOfCard>k__BackingField: Healing Touch
+  <Description>k__BackingField: Healing Touch is a card that restores a significant
+    amount of health to a friendly target, making it a valuable addition to any deck
+    focused on healing.
+  <ManaCost>k__BackingField: 3
+  onDrawn:
+  - rid: 6205771363031187458
+  onUsed:
+  - rid: 6205771363031187459
+  onDiscard:
+  - rid: 6205771363031187457
+  references:
+    version: 2
+    RefIds:
+    - rid: 6205771363031187457
+      type: {class: ManaGainAction, ns: Actions, asm: Actions}
+      data:
+        amount: 2
+    - rid: 6205771363031187458
+      type: {class: HealAction, ns: Actions, asm: Actions}
+      data:
+        amount: 2
+    - rid: 6205771363031187459
+      type: {class: HealAction, ns: Actions, asm: Actions}
+      data:
+        amount: 4

@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bf222393983e4b4eb8a5d068b492c74, type: 3}
+  m_Name: Thunderous Strike
+  m_EditorClassIdentifier: 
+  <NameOfCard>k__BackingField: Thunderous Strike
+  <Description>k__BackingField: This card allows for a quick and powerful strike
+    against an opponent, dealing significant damage.
+  <ManaCost>k__BackingField: 5
+  onDrawn:
+  - rid: 6205771363031187479
+  onUsed:
+  - rid: 6205771363031187475
+  onDiscard:
+  - rid: 6205771363031187469
+  references:
+    version: 2
+    RefIds:
+    - rid: 6205771363031187469
+      type: {class: ShieldAction, ns: Actions, asm: Actions}
+      data:
+        amount: 2
+    - rid: 6205771363031187475
+      type: {class: AOEDamage, ns: Actions, asm: Actions}
+      data:
+        targetAmount: 4
+        ownerAmount: 2
+    - rid: 6205771363031187479
+      type: {class: ShieldAction, ns: Actions, asm: Actions}
+      data:
+        amount: 0
