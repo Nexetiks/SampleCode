@@ -17,24 +17,24 @@ MonoBehaviour:
     against an opponent, dealing significant damage.
   <ManaCost>k__BackingField: 5
   onDrawn:
-  - rid: 6205771363031187479
+  - rid: 2617919851985633280
   onUsed:
   - rid: 6205771363031187475
   onDiscard:
-  - rid: 6205771363031187469
+  - rid: 2617919851985633281
   references:
     version: 2
     RefIds:
-    - rid: 6205771363031187469
-      type: {class: ShieldAction, ns: Actions, asm: Actions}
+    - rid: 2617919851985633280
+      type: {class: ShieldGainAction, ns: Actions, asm: Actions}
       data:
-        amount: 2
+        amount: 1
+    - rid: 2617919851985633281
+      type: {class: ManaGainAction, ns: Actions, asm: Actions}
+      data:
+        amount: 1
     - rid: 6205771363031187475
       type: {class: AOEDamage, ns: Actions, asm: Actions}
       data:
         targetAmount: 4
         ownerAmount: 2
-    - rid: 6205771363031187479
-      type: {class: ShieldAction, ns: Actions, asm: Actions}
-      data:
-        amount: 0

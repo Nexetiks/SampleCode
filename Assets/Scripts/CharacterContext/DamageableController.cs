@@ -7,21 +7,21 @@ namespace CharacterSystem
     public class DamageableController
     {
         [field: SerializeField]
-        public float HP { get; private set; }
+        public int HP { get; private set; }
         [field: SerializeField]
-        public float Shield { get; private set; }
+        public int Shield { get; private set; }
 
-        public void AddHp(float amount)
+        public void AddHp(int amount)
         {
             HP += amount;
         }
 
-        public void AddShield(float amount)
+        public void AddShield(int amount)
         {
             Shield += amount;
         }
 
-        public void DamageCharacter(float amount)
+        public void DamageCharacter(int amount)
         {
             Shield -= amount;
 
@@ -34,7 +34,7 @@ namespace CharacterSystem
             if (HP <= 0)
             {
                 HP = 0;
-                Debug.Log(" Killed");
+                Debug.Log("Killed");
             }
         }
     }

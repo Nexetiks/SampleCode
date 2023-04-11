@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -341,11 +341,21 @@ MonoBehaviour:
   playerCardsResolver:
     cardsDeck: {fileID: 11400000, guid: 712e599de04a9cf449fa0c48ca6e6874, type: 2}
     maximumCardInHand: 3
-    ownerCharacterContext: {fileID: 1763123750}
+    ownerCharacterContext:
+      <DamageableController>k__BackingField:
+        <HP>k__BackingField: 10
+        <Shield>k__BackingField: 0
+      <ManaController>k__BackingField:
+        <Mana>k__BackingField: 10
   enemyCardsResolver:
     cardsDeck: {fileID: 11400000, guid: 3e72be81d09fff04fa868ed0f634d1df, type: 2}
     maximumCardInHand: 3
-    ownerCharacterContext: {fileID: 1940778662}
+    ownerCharacterContext:
+      <DamageableController>k__BackingField:
+        <HP>k__BackingField: 10
+        <Shield>k__BackingField: 0
+      <ManaController>k__BackingField:
+        <Mana>k__BackingField: 10
   turnOwner: 0
   roundNumber: 0
 --- !u!4 &1227469900
@@ -359,107 +369,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1763123751}
-  - {fileID: 1940778663}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1763123749
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1763123751}
-  - component: {fileID: 1763123750}
-  m_Layer: 0
-  m_Name: Player
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1763123750
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1763123749}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29ef5bfdb16c9b440983ae1fcacc40e6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  <ManaController>k__BackingField:
-    <Mana>k__BackingField: 10
-  <DamageableController>k__BackingField:
-    <HP>k__BackingField: 10
-    <Shield>k__BackingField: 0
---- !u!4 &1763123751
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1763123749}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1227469900}
-  m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1940778661
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1940778663}
-  - component: {fileID: 1940778662}
-  m_Layer: 0
-  m_Name: Enemy
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1940778662
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1940778661}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29ef5bfdb16c9b440983ae1fcacc40e6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  <ManaController>k__BackingField:
-    <Mana>k__BackingField: 10
-  <DamageableController>k__BackingField:
-    <HP>k__BackingField: 10
-    <Shield>k__BackingField: 0
---- !u!4 &1940778663
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1940778661}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1227469900}
-  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

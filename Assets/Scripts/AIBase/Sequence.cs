@@ -23,13 +23,13 @@ namespace AIBase
                 }
                 else if (node.Evaluate() == NodeState.Failure)
                 {
-                    nodeState = NodeState.Failure;
-                    return nodeState;
+                    NodeState = NodeState.Failure;
+                    return NodeState;
                 }
             }
 
-            nodeState = isAnyStateRunning ? NodeState.Running : NodeState.Success;
-            return nodeState;
+            NodeState = isAnyStateRunning ? NodeState.Running : NodeState.Success;
+            return NodeState;
         }
     }
 }

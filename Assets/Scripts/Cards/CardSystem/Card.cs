@@ -15,11 +15,11 @@ namespace Cards
         public int ManaCost { get; private set; }
 
         [SerializeReference, ReferencePicker(TypeGrouping = TypeGrouping.ByFlatName)]
-        private List<CardAction> onDrawn = new List<CardAction>();
+        private List<CardActionBase> onDrawn = new List<CardActionBase>();
         [SerializeReference, ReferencePicker(TypeGrouping = TypeGrouping.ByFlatName)]
-        private List<CardAction> onUsed = new List<CardAction>();
+        private List<CardActionBase> onUsed = new List<CardActionBase>();
         [SerializeReference, ReferencePicker(TypeGrouping = TypeGrouping.ByFlatName)]
-        private List<CardAction> onDiscard = new List<CardAction>();
+        private List<CardActionBase> onDiscard = new List<CardActionBase>();
 
         public void OnDrawn(CardActionsContext cardActionsContext)
         {
@@ -36,7 +36,7 @@ namespace Cards
             ExecuteAllActions(onDiscard, cardActionsContext);
         }
 
-        private void ExecuteAllActions(List<CardAction> actions, CardActionsContext cardActionsContext)
+        private void ExecuteAllActions(List<CardActionBase> actions, CardActionsContext cardActionsContext)
         {
             int actionsCount = actions.Count;
 

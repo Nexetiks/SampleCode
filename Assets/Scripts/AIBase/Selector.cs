@@ -17,18 +17,18 @@ namespace AIBase
             {
                 if (node.Evaluate() == NodeState.Success)
                 {
-                    nodeState = NodeState.Success;
-                    return nodeState;
+                    NodeState = NodeState.Success;
+                    return NodeState;
                 }
                 else if (node.Evaluate() == NodeState.Running)
                 {
-                    nodeState = NodeState.Running;
-                    return nodeState;
+                    NodeState = NodeState.Running;
+                    return NodeState;
                 }
             }
 
-            nodeState = NodeState.Failure;
-            return nodeState;
+            NodeState = NodeState.Failure;
+            return NodeState;
         }
     }
 }

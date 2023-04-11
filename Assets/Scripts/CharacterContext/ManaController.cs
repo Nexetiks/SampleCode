@@ -14,7 +14,7 @@ namespace CharacterSystem
             Mana += amount;
         }
 
-        public void UseMana(int amount)
+        public void RemoveMana(int amount)
         {
             Mana -= amount;
         }

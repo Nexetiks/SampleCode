@@ -4,7 +4,7 @@ using UnityEngine;
 namespace CharacterSystem
 {
     [Serializable]
-    public class CharacterContext : MonoBehaviour
+    public class CharacterContext
     {
         [field: SerializeField]
         public DamageableController DamageableController { get; private set; }

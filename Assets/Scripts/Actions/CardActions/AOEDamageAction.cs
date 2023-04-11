@@ -2,12 +2,12 @@ using UnityEngine;
 
 namespace Actions
 {
-    public class AOEDamage : CardAction
+    public class AOEDamage : CardActionBase
     {
         [SerializeField]
-        private float targetAmount;
+        private int targetAmount;
         [SerializeField]
-        private float ownerAmount;
+        private int ownerAmount;
 
         public override void Execute(CardActionsContext cardActionsContext)
         {

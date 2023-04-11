@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Actions
 {
-    public class ManaGainAction : CardAction
+    public class ManaGainAction : CardActionBase
     {
         [SerializeField]
         private int amount;

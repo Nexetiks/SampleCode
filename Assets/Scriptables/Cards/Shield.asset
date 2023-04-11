@@ -17,20 +17,20 @@ MonoBehaviour:
     ally from damage.
   <ManaCost>k__BackingField: 3
   onDrawn:
-  - rid: 6205771363031187463
+  - rid: 2617919851985633283
   onUsed:
-  - rid: 6205771363031187464
+  - rid: 2617919851985633282
   onDiscard:
   - rid: 6205771363031187465
   references:
     version: 2
     RefIds:
-    - rid: 6205771363031187463
-      type: {class: ShieldAction, ns: Actions, asm: Actions}
+    - rid: 2617919851985633282
+      type: {class: DamageAction, ns: Actions, asm: Actions}
       data:
-        amount: 1
-    - rid: 6205771363031187464
-      type: {class: ShieldAction, ns: Actions, asm: Actions}
+        amount: 10
+    - rid: 2617919851985633283
+      type: {class: ShieldGainAction, ns: Actions, asm: Actions}
       data:
         amount: 2
     - rid: 6205771363031187465

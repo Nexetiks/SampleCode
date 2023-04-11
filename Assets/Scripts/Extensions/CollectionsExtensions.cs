@@ -16,7 +16,7 @@ namespace Extensions
 
             int randomNumber = Random.Range(0, list.Count - 1);
             randomElement = list[randomNumber];
-            list.Remove(randomElement);
+            list.RemoveAt(randomNumber);
             return true;
         }
     }

@@ -2,10 +2,10 @@ using UnityEngine;
 
 namespace Actions
 {
-    public class DamageAction : CardAction
+    public class DamageAction : CardActionBase
     {
         [SerializeField]
-        private float amount;
+        private int amount;
 
         public override void Execute(CardActionsContext cardActionsContext)
         {

@@ -22,24 +22,19 @@ namespace Cards
 
         public void Initialize()
         {
-            cardsDrawPile = new List<Card>();
-
-            foreach (Card card in cardsDeck.Cards)
-            {
-                cardsDrawPile.Add(card);
-            }
+            cardsDrawPile = new List<Card>(cardsDeck.Cards);
 
             cardsHand = new List<Card>();
             cardsDiscardPile = new List<Card>();
-
-            if (maximumCardInHand > cardsDrawPile.Count)
-            {
-                throw new Exception($"You want to add more cards ({maximumCardInHand}) then you have ({cardsDrawPile.Count})");
-            }
         }
 
         public void DrawTheCards()
         {
+            if (maximumCardInHand > cardsDrawPile.Count)
+            {
+                throw new Exception($"You want to add more cards ({maximumCardInHand}) than you have ({cardsDrawPile.Count})");
+            }
+
             for (int i = 0; i < maximumCardInHand; i++)
             {
                 if (cardsDrawPile.Count == 0)
@@ -47,10 +42,10 @@ namespace Cards
                     ShuffleDiscardPileToDrawPile();
                 }
 
-                if (cardsDrawPile.TryRemoveRandomElement(out Card cardToAddAtHand))
+                if (cardsDrawPile.TryRemoveRandomElement(out Card cardToAddToHand))
                 {
-                    cardsHand.Add(cardToAddAtHand);
-                    cardToAddAtHand.OnDrawn(new CardActionsContext(ownerCharacterContext, default));
+                    cardsHand.Add(cardToAddToHand);
+                    cardToAddToHand.OnDrawn(new CardActionsContext(ownerCharacterContext, default));
                 }
                 else
                 {
@@ -72,8 +67,13 @@ namespace Cards
                 return;
             }
 
-            ownerCharacterContext.ManaController.UseMana(card.ManaCost);
-            card.OnUsed(new CardActionsContext(ownerCharacterContext, target));
+            if (cardsHand.Contains(card))
+            {
+                cardsHand.Remove(card);
+                ownerCharacterContext.ManaController.RemoveMana(card.ManaCost);
+                card.OnUsed(new CardActionsContext(ownerCharacterContext, target));
+                cardsDiscardPile.Add(card);
+            }
         }
 
         public void DiscardCart(Card card, CharacterContext target)
@@ -90,7 +90,8 @@ namespace Cards
 
         private void ShuffleDiscardPileToDrawPile()
         {
-            cardsDrawPile.AddRange(cardsDiscardPile);
+            cardsDrawPile = new List<Card>(cardsDiscardPile);
+            cardsDiscardPile.Clear();
         }
     }
 }
